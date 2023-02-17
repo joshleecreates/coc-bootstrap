@@ -1,5 +1,5 @@
 # Global
-domain: 
+domain: craftersofcode.com
 storageClass: "do-block-storage"
 # Application specific
 bots:
