@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: bootstrap/bootstrap-resources
-    repoURL: https://github.com/hivenetes/k8s-bootstrapper
+    repoURL: https://github.com/joshleecreates/coc-bootstrap
     targetRevision: HEAD
     helm:
       parameters:
