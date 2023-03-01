@@ -18,6 +18,6 @@ spec:
               service:
                 name: otel-demo-frontendproxy
                 port:
-                  number: 80
+                  number: 8080
             path: /
             pathType: Prefix
