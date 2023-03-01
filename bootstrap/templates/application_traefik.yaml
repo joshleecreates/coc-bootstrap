@@ -16,6 +16,10 @@ spec:
     helm:
     repoURL: https://traefik.github.io/charts
     targetRevision: v20.8.0
+    helm:
+      parameters:
+        additionalArguments:
+          - "--providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik"
   syncPolicy:
     automated:
       prune: true
