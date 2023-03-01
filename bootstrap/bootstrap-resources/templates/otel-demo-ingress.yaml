@@ -4,8 +4,6 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-issuer
     meta.helm.sh/release-namespace: otel-demo
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    traefik.ingress.kubernetes.io/router.tls: "true"
   name: otel-demo-ingress
   namespace: otel-demo
 spec:
