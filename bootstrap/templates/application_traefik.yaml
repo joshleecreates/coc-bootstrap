@@ -19,8 +19,7 @@ spec:
     helm:
       parameters:
         - name: additionalArguments
-          value: 
-            - "--providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik"
+          value: "--providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik"
   syncPolicy:
     automated:
       prune: true
