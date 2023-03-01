@@ -18,8 +18,9 @@ spec:
     targetRevision: v20.8.0
     helm:
       parameters:
-        additionalArguments:
-          - "--providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik"
+        - name: additionalArguments
+          value: 
+            - "--providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik"
   syncPolicy:
     automated:
       prune: true
