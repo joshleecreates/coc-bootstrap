@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: robot-shop
+  namespace: argocd
+spec:
+  destination:
+    namespace: otel-demo
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./K8s/helm
+    repoURL: https://github.com/instana/robot-shop
+    targetRevision: HEAD
+    helm:
+      parameters:
+        - name: redis.storageClassName
+          value: {{ .Values.storageClass }}  
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
