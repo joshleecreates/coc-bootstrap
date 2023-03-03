@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: robot-shop-ingress
+  namespace: robot-shop
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: robotshop.{{ .Values.domain }}
+      http:
+        paths:
+          - backend:
+              service:
+                name: robot-shop-web
+                port:
+                  number: 8080
+            path: /
+            pathType: Prefix
