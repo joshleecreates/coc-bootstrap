@@ -11,7 +11,7 @@ spec:
         paths:
           - backend:
               service:
-                name: robot-shop-web
+                name: web
                 port:
                   number: 8080
             path: /
