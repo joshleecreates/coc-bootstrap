@@ -1,0 +1,21 @@
+{{- if .Values.playlists.enable }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: playlists
+  namespace: argocd
+spec:
+  destination:
+    namespace: playlists
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./helm
+    repoURL: https://github.com/joshleecreates/playlist-api
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+{{- end }}

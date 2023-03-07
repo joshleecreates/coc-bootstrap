@@ -19,3 +19,5 @@ traefik:
   enable: true  
 trivy:
   enable: false
+playlists:
+  enabl: true
