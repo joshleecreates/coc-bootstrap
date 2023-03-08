@@ -23,3 +23,5 @@ playlists:
   enable: true
 robotshop:
   enable: false
+oteldemo:
+  enable: false
