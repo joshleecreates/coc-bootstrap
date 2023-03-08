@@ -11,7 +11,7 @@ spec:
         paths:
           - backend:
               service:
-                name: web
+                name: playlists
                 port:
                   number: 8080
             path: /
