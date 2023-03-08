@@ -20,4 +20,6 @@ traefik:
 trivy:
   enable: false
 playlists:
-  enabl: true
+  enable: true
+robotshop:
+  enable: false
