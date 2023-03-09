@@ -20,7 +20,7 @@ traefik:
 trivy:
   enable: false
 playlists:
-  enable: false
+  enable: true
 robotshop:
   enable: false
 oteldemo:
